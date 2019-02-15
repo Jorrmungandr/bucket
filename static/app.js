@@ -12,7 +12,7 @@ const moveDiv = () => {
     coords = 'X:' + event.clientX + ', Y:' + event.clientY;
     document.getElementById('coordsContainer').innerHTML = coords;
     ball.style.left = (event.clientX - 5 + 'px');
-    ballTop = (event.clientY - 5 + 'px');
+    ball.style.top = (event.clientY - 5 + 'px');
 }
 
 const gravityApply = () => {
