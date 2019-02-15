@@ -1,9 +1,26 @@
 #ball{
     background-color:blue;
-    height: 300px;
-    width: 300px;
+    height: 10px;
+    width: 10px;
     border-radius:50%;
     position: absolute;
     left: 512.5px;
     top:167px;
+}
+#cup{
+    width: 100px;
+    height: 200px;
+    background-color: rgba(175, 174, 173, 0.836);
+    position: absolute;
+    left: 663px;
+    top: 319px;
+}
+#water{
+    width: 90px;
+    height: 0px;
+    background-color: blue;
+    position: absolute;
+    left: 668px;
+    bottom: 124px;
+    
 }
