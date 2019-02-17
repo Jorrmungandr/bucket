@@ -4,23 +4,19 @@ let coords;
 let flag = 1;
 let fallSpeed = 0;
 let topDis = 0;
-let ballTop = ball.style.top
-let mouseX;
-let mouseY;
+let mainY = '167px';
+let mainX = '512.5px';
 let gravityOn = false;
-let mouseMove = true;
 
-const gravity = 0.7;
+const gravity = 0.5;
 
 const moveDiv = () => {
-    if (gravityOn === false & mouseMove ===true) {
+    if (gravityOn === false) {
         coords = 'X:' + event.clientX + ', Y:' + event.clientY;
         document.getElementById('coordsContainer').innerHTML = coords;
         ball.style.left = (event.clientX - 5 + 'px');
         ball.style.top = (event.clientY - 5 + 'px');
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-    }
+    }   
 }
 
 const gravityApply = () => {
@@ -28,22 +24,20 @@ const gravityApply = () => {
     topDis = parseFloat(ball.style.top, 10);
     leftDis = parseFloat(ball.style.left, 10);
     ball.style.top = topDis + fallSpeed + 'px';
-    if (topDis >= 500 & leftDis > 669 & leftDis < 758) {
-        if (water.clientHeight <= 190) {
+    if (topDis >= 500 - water.clientHeight & leftDis > 669 & leftDis < 758) {
+        if (water.clientHeight <= 185) {
             water.style.height = water.clientHeight + 5 + 'px';
-            flag = 0;
-            ball.style.top = 167 + 'px';
-            ball.style.left = 512.5 + 'px';
             fallSpeed = 0;
-            moveMouse = false;
+            flag = 0;
+            ball.style.top = mainY;
+            ball.style.left = mainX;
         }
     }
     if (topDis >= 585.93) {
-        flag = 0;
-        ball.style.top = 167 + 'px';
-        ball.style.left = 512.5 + 'px';
         fallSpeed = 0;
-        moveMouse = false;
+        flag = 0;
+        ball.style.top = mainY;
+        ball.style.left = mainX;
     }
 }
 //on mouse down
