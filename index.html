@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bucket</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bucket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css">
+  <meta name="Author" content="Jorrmungandr">
 </head>
+
 <body>
-    <div id="ball" onmousedown="followMouse()" onmouseup="stopFollowingMouse()"></div>
-    <div id="cup"></div>
-    <div id="water"></div>
-    <p id="coordsContainer"></p>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="/static/app.js"></script>
+  <!--The Drop and its functions-->
+  <div id="ball" onmousedown="followMouse()" onmouseup="stopFollowingMouse()"></div>
+  <!--The cup-->
+  <div id="cup"></div>
+  <!--The water that is controlled by js-->
+  <div id="water"></div>
+  <!--The coordinates that is on left top of the screen-->
+  <p id="coordsContainer"></p>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="/static/app.js"></script>
 </body>
+
 </html>
